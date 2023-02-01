@@ -32,11 +32,9 @@ const _import = async () => {
   const listMembers = await v2Client.listMembers(LIST_ID_1, {
     'user.fields': ['id'],
   })
-  console.log(listMembers.data.errors?.length)
-  console.log(listMembers.done)
+  console.log('fetched the errors:', Boolean(listMembers.data.errors?.length))
 
   for (const member of listMembers) {
-    console.log('for', member)
     cacheMemberIds.add(member.id)
     console.log('imported', member.id)
   }
