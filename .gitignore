@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+
+# Plugins
+.history
+
+# Project
+.env
+dist
+node_modules

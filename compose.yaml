@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  twitter-user-collection:
+    container_name: twitter-user-collection
+    build: .
+    env_file:
+      - .env

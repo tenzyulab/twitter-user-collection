@@ -1,0 +1,38 @@
+{
+  "name": "twitter-user-collection",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && esbuild src/main.ts --bundle --sourcemap --platform=node --format=esm --outdir=dist --banner:js='import { createRequire } from \"module\"; const require = createRequire(import.meta.url);'",
+    "prepare": "husky install",
+    "start": "node dist/main.js"
+  },
+  "lint-staged": {
+    "*": "prettier --write --cache --ignore-unknown",
+    "*.{ts,tsx}": "eslint --fix",
+    "package.json": "sort-package-json"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.0",
+    "twitter-api-v2": "^1.14.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@tenzyu/tsconfig": "^0.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.17.5",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.2",
+    "sort-package-json": "^2.3.0",
+    "typescript": "^4.9.5"
+  }
+}

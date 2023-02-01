@@ -1,0 +1,11 @@
+{
+  "extends": "@tenzyu/tsconfig/base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true
+  },
+  "include": ["src"]
+}
